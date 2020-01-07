@@ -35,6 +35,8 @@ First, Fork the repository.
 
 Next, replace the `CodeChallenge.Target` implementation with your own version. You aren't limited to C# and dotnet for this. Anything that will execute in a docker container is eligable. Write your solution in javascript, go, rust, webassembly or any other language you want. Just update `fixture.Dockerfile` to include an appropriate build/runtime environment for your language of choice.
 
+Build with `docker build -f fixture.Dockerfile .`.
+
 You can run `docker-compose run debug` to test your implementation. All stdout and stderr streams from your application will be echoed to the console. When you're ready to run for real just run `docker-compose run benchmark`. The benchmark will run the baseline first and your implementation next. You'll recieve a list of run times for each pass and a final score.
 
 ## Questions
